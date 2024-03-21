@@ -1,4 +1,5 @@
 using Cadastro_b.Models;
+using Cadastro_b.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -17,9 +18,13 @@ namespace Cadastro_b.Controllers
         {
             return View();
         }
-
-        public IActionResult Resultados()
+       
+        public IActionResult Resultados(string nome,string endereco, string telefone)
         {
+
+            string dadosFormatados = ServiceFormat.FormatData(nome, endereco, telefone);
+
+            ViewBag.DadosFormatados = dadosFormatados;
             return View();
         }
 
