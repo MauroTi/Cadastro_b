@@ -1,4 +1,13 @@
 ﻿@page
-@model Cadastro_b.Views.Home.Resultados
+@using Cadastro_b.Services
+@using Microsoft.AspNetCore.Mvc
 @{
+   
 }
+
+<div class="container">
+    <h1 class="display-4">Resultados</h1>
+
+    <!-- Exibir os dados formatados -->
+    <div>@Html.Raw(ViewBag.DadosFormatados)</div>
+</div>
